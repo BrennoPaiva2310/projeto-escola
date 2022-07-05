@@ -1,0 +1,11 @@
+package br.com.castgroup.escola.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service//Para mexer com minha regra de negocio
+public class AlunoService {
+	
+	@Autowired
+
+}

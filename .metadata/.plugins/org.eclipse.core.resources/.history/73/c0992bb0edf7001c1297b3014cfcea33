@@ -1,0 +1,93 @@
+package br.com.castgroup.escola.entities;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_aluno")
+public class Aluno {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer idAluno;
+	@Column(name = "nome", length = 150, nullable = false)
+	private String nome;
+
+	@Column(name = "endereco", nullable = false)
+	private String endereco;
+	
+	@ManyToOne
+	@JoinColumn(name="fkturma")
+	private Turma turma;
+	
+	public Aluno() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Aluno(Integer idAluno, String nome, String endereco, Turma turma) {
+		super();
+		this.idAluno = idAluno;
+		this.nome = nome;
+		this.endereco = endereco;
+		this.turma = turma;
+	}
+
+	public Integer getIdAluno() {
+		return idAluno;
+	}
+
+	public void setIdAluno(Integer idAluno) {
+		this.idAluno = idAluno;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public Turma getTurma() {
+		return turma;
+	}
+
+	public void setTurma(Turma turma) {
+		this.turma = turma;
+	}
+
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

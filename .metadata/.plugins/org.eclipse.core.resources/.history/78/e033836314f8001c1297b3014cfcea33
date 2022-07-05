@@ -1,0 +1,29 @@
+package br.com.castgroup.escola.dtos;
+
+import java.io.Serializable;
+
+public class CursoDTO implements Serializable{
+
+
+	private static final long serialVersionUID = 1L;
+	
+	private Integer idCurso;
+	private String nome;
+	private String sigla;
+	
+	public CursoDTO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public CursoDTO(Curso obj) {
+		super();
+		this.idCurso = idCurso;
+		this.nome = nome;
+		this.sigla = sigla;
+	}
+	
+	
+
+
+
+}

@@ -1,0 +1,39 @@
+package br.com.castgroup.escola.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import br.com.castgroup.escola.entities.Aluno;
+import br.com.castgroup.escola.repository.aluno.IAlunoRepository;
+import br.com.castgroup.escola.request.aluno.AlunoGetResponse;
+
+@Service
+public class AlunoService {
+	
+	@Autowired
+	private IAlunoRepository repository;
+	
+	public Aluno findById(Integer id) {
+		Optional<Aluno> itemAluno = repository.findById(id);
+
+        if (itemAluno.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }else {
+        	AlunoGetResponse response = new AlunoGetResponse();
+            Aluno aluno = itemAluno.get();
+
+            response.setIdAluno(aluno.getIdAluno());
+            response.setNome(aluno.getNome());
+            response.setEndereco(aluno.getEndereco());
+		
+            return ResponseEntity.status(HttpStatus.OK).body(response);
+
+		
+        }
+	}
+
+}

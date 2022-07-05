@@ -1,0 +1,15 @@
+package br.com.castgroup.escola.dtos;
+
+import java.io.Serializable;
+
+public class CursoDTO implements Serializable{
+
+
+	private static final long serialVersionUID = 1L;
+	
+	private Integer idCurso;
+	private String nome;
+
+
+
+}

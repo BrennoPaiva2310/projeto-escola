@@ -1,0 +1,38 @@
+package br.com.castgroup.escola;
+
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
+import br.com.castgroup.escola.entities.Aluno;
+import br.com.castgroup.escola.entities.Curso;
+import br.com.castgroup.escola.entities.Professor;
+import br.com.castgroup.escola.entities.Turma;
+import br.com.castgroup.escola.repository.aluno.IAlunoRepository;
+import br.com.castgroup.escola.repository.curso.ICursoRepository;
+import br.com.castgroup.escola.repository.professor.IProfessorRepository;
+import br.com.castgroup.escola.repository.turma.ITurmaRepository;
+
+@EnableWebMvc
+@SpringBootApplication
+public class EscolaApplication{
+	
+
+	public static void main(String[] args) {
+		SpringApplication.run(EscolaApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		
+		
+	}
+
+
+	
+
+}

@@ -1,0 +1,14 @@
+package br.com.castgroup.escola.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.com.castgroup.escola.repository.aluno.IAlunoRepository;
+
+@Service//Para mexer com minha regra de negocio
+public class AlunoService {
+	
+	@Autowired
+	private IAlunoRepository repository;
+
+}

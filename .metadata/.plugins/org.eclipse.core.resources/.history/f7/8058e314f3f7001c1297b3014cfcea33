@@ -1,0 +1,28 @@
+package br.com.castgroup.escola;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import br.com.castgroup.escola.entities.Aluno;
+import br.com.castgroup.escola.entities.Curso;
+import br.com.castgroup.escola.entities.Professor;
+import br.com.castgroup.escola.entities.Turma;
+
+@SpringBootApplication
+public class EscolaApplication implements CommandLineRunner{
+
+	public static void main(String[] args) {
+		SpringApplication.run(EscolaApplication.class, args);
+	}
+	
+	@Override
+	public void run(String[] args) {
+		Aluno a1 = new Aluno(null,"Brenno", "Rua São Geraldo 17");
+		Curso c1 = new Curso(null,"matematica","mat");
+		Professor p1 = new Professor(null,"Paulo Andre", "rua antonio silva");
+		Turma t1 = new Turma(null,2,2020,a1,c1,p1);
+		
+	}
+
+}

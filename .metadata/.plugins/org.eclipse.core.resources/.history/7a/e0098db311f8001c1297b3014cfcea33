@@ -1,0 +1,9 @@
+package br.com.castgroup.escola.dtos;
+
+public class AlunoDTO {
+	
+	private Integer id;
+	private String nome;
+	private String endereco;
+
+}

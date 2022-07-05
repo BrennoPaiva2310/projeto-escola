@@ -1,0 +1,14 @@
+package br.com.castgroup.escola.dtos;
+
+import java.io.Serializable;
+
+public class ProfessorDTO implements Serializable{
+
+	
+	private static final long serialVersionUID = 1L;
+	
+	private Integer idProfessor;
+	private String nome;
+	private String endereco;
+
+}

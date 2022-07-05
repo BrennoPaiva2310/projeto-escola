@@ -1,0 +1,27 @@
+package br.com.castgroup.escola.dtos;
+
+import java.io.Serializable;
+
+public class ProfessorDTO implements Serializable{
+
+	
+	private static final long serialVersionUID = 1L;
+	
+	private Integer idProfessor;
+	private String nome;
+	private String endereco;
+	
+	public ProfessorDTO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public ProfessorDTO(Professor obj) {
+		super();
+		this.idProfessor = idProfessor;
+		this.nome = nome;
+		this.endereco = endereco;
+	}
+	
+	
+
+}

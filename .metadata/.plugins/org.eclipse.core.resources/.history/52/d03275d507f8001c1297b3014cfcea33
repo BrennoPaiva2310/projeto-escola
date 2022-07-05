@@ -1,0 +1,8 @@
+package br.com.castgroup.escola.service;
+
+@Service//Para mexer com minha regra de negocio
+public class AlunoService {
+	
+	@Aut
+
+}

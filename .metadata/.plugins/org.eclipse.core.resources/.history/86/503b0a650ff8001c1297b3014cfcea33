@@ -1,0 +1,6 @@
+package br.com.castgroup.escola.service;
+
+//Tratamento caso o objeto não venha
+public class ObjectNotFoundException {
+
+}

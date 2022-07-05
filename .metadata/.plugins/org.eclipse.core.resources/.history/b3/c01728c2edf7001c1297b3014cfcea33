@@ -1,0 +1,104 @@
+package br.com.castgroup.escola.entities;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_turma")
+public class Turma {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer idTurma;
+
+	@Column(name = "semestre", length = 10, nullable = false)
+	private Integer semestre;
+	
+	@Column(name = "ano",  nullable = false)
+	private Integer ano;
+	
+	@OneToMany
+	private List<Aluno> aluno = new ArrayList<>();
+
+	@OneToMany
+	private List<Curso> curso = new ArrayList<>();
+
+	@OneToMany
+	private List<Professor> professor = new ArrayList<>();
+//	@ManyToOne
+//	@JoinColumn(name= "professorid")
+//	private Professor professor;
+//	
+//	@ManyToOne
+//	@JoinColumn(name= "cursoid")
+//	private Curso curso;
+//	
+	public Turma() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	public Turma(Integer idTurma, Integer semestre, Integer ano, List<Aluno> aluno, List<Curso> curso,
+		List<Professor> professor) {
+	super();
+	this.idTurma = idTurma;
+	this.semestre = semestre;
+	this.ano = ano;
+	this.aluno = aluno;
+	this.curso = curso;
+	this.professor = professor;
+}
+
+
+	public Integer getIdTurma() {
+		return idTurma;
+	}
+	public void setIdTurma(Integer idTurma) {
+		this.idTurma = idTurma;
+	}
+	public Integer getSemestre() {
+		return semestre;
+	}
+	public void setSemestre(Integer semestre) {
+		this.semestre = semestre;
+	}
+	public Integer getAno() {
+		return ano;
+	}
+	public void setAno(Integer ano) {
+		this.ano = ano;
+	}
+	public List<Aluno> getAluno() {
+		return aluno;
+	}
+	public void setAluno(List<Aluno> aluno) {
+		this.aluno = aluno;
+	}
+	public List<Curso> getCurso() {
+		return curso;
+	}
+	public void setCurso(List<Curso> curso) {
+		this.curso = curso;
+	}
+	public List<Professor> getProfessor() {
+		return professor;
+	}
+	public void setProfessor(List<Professor> professor) {
+		this.professor = professor;
+	}
+
+	
+	
+
+
+
+}
